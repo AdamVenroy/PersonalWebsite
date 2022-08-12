@@ -1,0 +1,46 @@
+{% extends "layout.html" %} {% block content %}
+
+<section class="section">
+    <div class="columns">
+        <div class="column is-4 is-offset-2">
+            <h1 class="title">Hello!</h1>
+            <h2 class="subtitle">I'm Adam Venroy.</h2>
+        </div>
+        <div class="column is-4"><canvas id="myCanvas" height="900"></canvas></div>
+    </div>
+</section>
+<script>
+const canvas = document.getElementById('myCanvas');
+const context = canvas.getContext('2d');
+const centerX = canvas.width / 2;
+const centerY = canvas.height / 2-300;
+const bodyLength = 200;
+const radius = 70;
+function init(){
+    context.beginPath();
+    context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+    context.lineWidth = 5;
+    context.strokeStyle = '#0';
+    context.stroke();
+    context.beginPath();
+    context.moveTo(centerX,centerY+radius);
+    context.lineTo(centerX,centerY+radius+bodyLength);
+    context.stroke();
+    context.moveTo(centerX,centerY+radius+bodyLength);
+    context.lineTo(centerX-60,centerY+radius+bodyLength+60);
+    context.stroke();
+    context.moveTo(centerX,centerY+radius+bodyLength);
+    context.lineTo(centerX+60,centerY+radius+bodyLength+60);
+    context.stroke();
+    context.moveTo(centerX,centerY+radius+bodyLength/3);
+    context.lineTo(centerX-60,centerY+radius+bodyLength/3 + 60);
+    context.stroke();
+    context.strokeStyle = 'black';
+    context.moveTo(centerX,centerY+radius+bodyLength/3);
+    context.lineTo(centerX+60,centerY+radius+bodyLength/3 - 60);
+    context.stroke();
+}
+init();
+</script> 
+
+{% endblock %}

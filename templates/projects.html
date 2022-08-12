@@ -1,0 +1,38 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="columns">
+  <!-- Start of Column-->
+    <div class="column is-one-quarter">
+        <article class="message">
+            <div class="message-header">
+              <p>Video Game Website</p>
+              <button class="button" onclick="location.href='https://github.com/AdamVenroy/vgwebsite'">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+              </button>
+            </div>
+            <div class="message-body">
+                A Video Game website where users can create accounts and add games to a database, where other users can then review.
+            </div>
+          </article>
+    </div>
+    <!-- End of Column-->
+    <div class="column is-one-quarter ">
+        <article class="message">
+            <div class="message-header">
+              <p>Spotify to Youtube Download</p>
+              <button class="button" onclick="location.href='https://github.com/AdamVenroy/SpotifyDownload'">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+              </button>
+            </div>
+            <div class="message-body">
+              A tool that takes a spotify playlist from the Spotify API and searches each song on Youtube and then downloads a MP3 of the video.
+            </div>
+          </article>
+    </div>
+</div>
+
+{% endblock %}
